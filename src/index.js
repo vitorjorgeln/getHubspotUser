@@ -20,17 +20,6 @@ app.post('/gethubspotuser/email/:email/', jsonParser, async (req, res) => {
 
         const obj = Object.assign({}, retorno);
 
-        const renameKeys = (keysMap, obj) =>
-                Object.keys(obj).reduce(
-                        (acc, key) => ({
-                                ...acc,
-                                ...{ [keysMap[key] || key]: obj[key] }
-                        }),
-                        {}
-                );
-
-        const keys = Object.assign({}, requests.params);
-
         for (let index = 0; index < requests.params.length; index++) {
 
                 obj[requests.params[index]] = obj[index]
