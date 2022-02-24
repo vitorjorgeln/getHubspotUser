@@ -29,5 +29,5 @@ app.post('/gethubspotuser/email/:email/', jsonParser, async (req, res) => {
         return res.json(obj)
 })
 
-const PORT = process.env.PORT || 6666
+const PORT = process.env.PORT || 666
 app.listen(PORT)
