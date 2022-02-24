@@ -3,10 +3,10 @@
 ---
 
 ## Objective
-Return data about an client/prospect/user previosly redistered in your Hubspot system. 
+Return data about an client/prospect/user previosly registered in your Hubspot system. 
 To do this, you have to inform in the request:
 
--> The HAPI Key -- Your api key of your Hubspot account. Whithout this, you won't have the permission to get any data about your users. 
+-> The HAPI Key -- Your account's api key. Whithout this, you won't have the permission to get any data about your users. 
 
 -> The user e-mail -- We need to define what user will be consulted in this request;
 
