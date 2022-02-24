@@ -1,23 +1,22 @@
-## FinApi - Financeia
+# Request - GetHubspotuser
 
 ---
 
-## Requisitos
-- [x] Deve ser possível criar umma conta
-- [x] Deve ser possível buscar o extrato bancário do cliente
-- [] Deve ser possível realizar um depósito
-- [] Deve ser possível realizar um saque
-- [] Deve ser possível buscar o extrato bancário do cliente por data
-- [] Deve ser possível atualizar dados da conta do cliente
-- [] Deve ser possível obter dados da conta do cliente
-- [] Deve ser possível deletar uma conta
+## Objective
+Return data about an client/prospect/user previosly redistered in your Hubspot system. 
+To do this, you have to inform in the request:
+
+-> The HAPI Key -- Your api key of your Hubspot account. Whithout this, you won't have the permission to get any data about your users. 
+
+-> The user e-mail -- We need to define what user will be consulted in this request;
+
+-> All the "intenal names" of the fields that woul'd be returned at this request;
+
+## Request example:
+-> Method - POST
+-> URL - {{localhost}}/gethubspotuser/email/{{YOUR_CLIENT_EMAIL_HERE}}/
+-> Header - hapikey: {{YOUR_HAPI_KEY}}
+-> Body - {"params":["firstname", "lastname", "ay_another_field_you_want"]}
 
 ---
 
-### Regras de negócio
-- [x] Não deve ser possível cadastrar uma conta com CPF já existente
-- [x] Não deve ser possível fazer depósito em uma conta não existente
-- [] Não deve ser possível buscar extrato em uma conta não existente
-- [] Não deve ser possível fazer saque em uma conta não existente
-- [] Não deve ser possível excluir uma conta não existente
-- [] Não deve ser possível fazer saque quando o saldo for insuficiente
